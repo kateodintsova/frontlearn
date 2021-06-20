@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Текстовые поля в HTML5</title>
+    </head>
+    <body>
+        <form>
+            <p><input type="text" name="userName" placeholder="Введите имя" value="Том" size="30" readonly /></p>
+            <p><input type="text" name="userPhone" placeholder="Введите номер телефона" size="30" maxlength="11" /></p>
+            <p><input type="password" name="password" placeholder="Введите пароль" size="30" /></p>
+            <p>
+                <button type="submit">Отправить</button> 
+                <button type="reset">Отмена</button>
+            </p>
+        </form>
+
+        <form>
+            <p><input list="phonesList" type="text" name="model" placeholder="Введите модель" /></p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+        <datalist id="phonesList">
+            <option value="iPhone 6S" label="54000"/>
+            <option value="Lumia 950">35000</option>
+            <option value="Nexus 5X"/>
+        </datalist>
+
+        <form>
+            <input type="search" name="term" />
+            <input type="submit" value="Поиск" />
+        </form>
+    </body>
+</html>
