@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Псевдоклассы в CSS3</title>
+        <style>
+            a:link    {color:blue; text-decoration:none}
+            a:not(.blueLink) { color: red; }
+            a:visited {color:pink; text-decoration:none}
+            a:hover   {color:red; text-decoration:underline}
+            a:active  {color:yellow; text-decoration:underline}
+            input:hover {border:2px solid red;}
+            :lang(ru) {color: green;}
+        </style>
+    </head>
+    <body>
+        <a href="index.html">Учебник по CSS3</a><br/>
+        <a>Первая ссылка</a><br/>
+        <a class="blueLink">Вторая ссылка</a><br/>
+        <a>Третья ссылка</a>
+        <input type="text" />
+
+        <p lang="ru-RU">Я изучаю CSS3</p>
+        <p lang="en-US">I study CSS3</p>
+        <p lang="de-DE">Ich lerne CSS3</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Линейный градиент в CSS3</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+            /* background-image: linear-gradient(left,black,white);
+            background-image: -o-linear-gradient(left,black,white);
+            background-image: -moz-linear-gradient(left,black,white);
+            background-image: -webkit-linear-gradient(left,black,white); */
+            background-image: repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+            background-image: -moz-repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+            background-image: -webkit-repeating-linear-gradient(left, #ccc 20px, red 30px, rgba(0, 0, 126, .5) 40px);
+        }
+
+        p {
+            margin: 0;
+            padding-top: 30px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Линейный черно-белый градиент</p>
+    </div>
+</body>
+
+</html>

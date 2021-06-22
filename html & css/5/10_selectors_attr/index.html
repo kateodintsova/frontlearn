@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Селекторы атрибутов в CSS3</title>
+    <style>
+        input[type="text"] {
+            border: 2px solid red;
+        }
+
+        .link[href="http://apple.com"] {
+
+            color: red;
+        }
+
+        a[href^="https://"] { /* ^ указывает что должно начинаться на указанный текст */
+
+            color: red;
+        }
+
+        img[src$=".jpg"] { /* $ указывает что должно заканчиваться на указанный текст */
+
+            width: 100px;
+        }
+
+        a[href*="microsoft"] { /* * указывает что указанный текст должен присутствовать, неважно где */
+
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p><input type="text" id="login" /></p>
+    <p><input type="password" id="password" /></p>
+    <input type="submit" value="Send" /><br>
+
+    <a class="link" href="http://microsoft.com">Microsoft</a> |
+    <a class="link" href="https://google.com">Google</a> |
+    <a class="link" href="http://apple.com">Apple</a>
+</body>
+
+</html>
