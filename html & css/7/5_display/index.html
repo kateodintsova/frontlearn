@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Свойство display в CSS3</title>
+    <style>
+        span {
+            width: 100px;
+            height: 30px;
+            background-color: #aaa;
+        }
+
+        .inineBlockSpan {
+            display: inline-block;
+        }
+
+        ul {
+            display: table;
+            margin: 0;
+        }
+
+        li {
+            list-style-type: none;
+            display: table-cell;
+            padding: 10px;
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Проехав с полверсты в хвосте <span>колонны</span>, он остановился</p>
+    <p>Проехав с полверсты в хвосте <span class="inineBlockSpan">колонны</span>, он остановился</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <p>Первый параграф</p>
+    <p class="invisible">Второй параграф</p>
+    <p>Третий параграф</p>
+</body>
+
+</html>
