@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Variables в CSS3</title>
+        <style>
+            :root{
+              --tex-color: #ff4757;
+              --text-size: 20px;
+              --reserved-color: #5352ed;
+            }
+            div {
+              height: 35px;
+              font-family: Verdana;
+            }
+ 
+            #div1 {
+                color: var(--text-color, var(--reserved-color));
+            }
+ 
+            #div2 {
+                color: var(--text-color, var(--reserved-color, red));
+            }
+ 
+            #div3 {
+                color: var(--text-color, #2ed573);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">Первый блок.</div>
+        <div id="div2">Второй блок.</div>
+        <div id="div3">Третий блок.</div>
+    </body>
+</html>

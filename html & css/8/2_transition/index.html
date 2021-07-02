@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Переход в CSS3</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 40px 30px;
+            border: 1px solid #333;
+
+            background-color: #ccc;
+            transition-property: background-color, width;
+            transition-duration: 2s, 10s;
+            transition-delay: 500ms;
+            transition-timing-function: ease-in-out;
+            /* transition-timing-function: cubic-bezier(.5, .6, .24, .18); для использования кубической Безье необходимо передать ряд значений */
+
+            /* transition: background-color 3s ease-in-out 500ms; сокращенная запись */
+        }
+
+        div:hover {
+            background-color: red;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

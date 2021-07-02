@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Анимация в CSS3</title>
+    <style>
+        @keyframes backgroundColorAnimation {
+            from {
+                background-color: red;
+                opacity: 0.2;
+            }
+
+            to {
+                background-color: blue;
+                opacity: 0.9;
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 40px 30px;
+            border: 1px solid #333;
+
+            background-color: #ccc;
+        }
+
+        div:hover {
+            animation-name: backgroundColorAnimation;
+            animation-duration: 5s;
+            /* задержка в 1 секунду */
+            animation-delay: 1s;
+            animation-duration: 2s;
+            /* повторяется бесконечное число раз */
+            animation-iteration-count: infinite;
+            /* при повторе анимация имеет противоположное направление */
+            animation-direction: alternate;
+            /* в качестве окончательного значения анимируемого свойства устанавливается то, что было в последнем кадре */
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            /* сокращенная запись; название и время являются обязательными параметрами */
+            /* animation: backgroundColorAnimation 5s ease-in-out 3 alternate 1s forwards; */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

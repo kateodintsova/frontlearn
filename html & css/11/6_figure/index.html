@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas в HTML5</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="420" height="200" style="background-color:#eee; border:1px solid #ccc;">
+        Ваш браузер не поддерживает Canvas
+    </canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas"),
+            context = canvas.getContext("2d");
+        context.beginPath();
+        // context.rect(30, 20, 100, 90); прямоугольник
+        context.moveTo(30, 20);
+        context.lineTo(150, 140);
+        context.lineTo(250, 30);
+        context.closePath();
+        context.strokeStyle = "red";
+        context.fillStyle = "blue";
+        context.fill();
+        context.stroke();
+        // context.clip(); ограничивает область данной фигурой
+
+        // рисуем второй зеленый прямоугольник
+        context.beginPath();
+        context.rect(10, 50, 180, 70);
+        context.closePath();
+        context.strokeStyle = "green";
+        context.stroke();
+
+        // рисуем круг
+        context.beginPath();
+        context.arc(350, 90, 50, 0, Math.PI * 2, false);
+        context.closePath();
+        context.stroke();
+
+        // рисуем дугу
+        context.beginPath();
+        context.moveTo(0, 150);
+        context.arcTo(0, 0, 150, 0, 140)
+        context.closePath();
+        context.stroke();
+
+        // кривая Безье
+        context.beginPath();
+        context.moveTo(30, 100);
+        context.bezierCurveTo(110, 0, 190, 200, 270, 100);
+        context.closePath();
+        context.stroke();
+    </script>
+</body>
+
+</html>

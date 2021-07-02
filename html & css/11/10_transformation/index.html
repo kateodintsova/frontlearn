@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas в HTML5</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="1000" style="background-color:#eee; border:1px solid #ccc;">
+        Ваш браузер не поддерживает Canvas
+    </canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas"),
+            context = canvas.getContext("2d");
+
+        context.fillStyle = "blue";
+        context.fillRect(50, 50, 100, 100);
+        context.rotate(.52);    // поворот на 0.52 радиан или 30 градусов
+        context.translate(100, 50); // смещение на 100 пикселей вправо и 50px вниз
+        context.scale(1.5, 1.3); // растяжение по ширине в 1.5 раза и сжатие по высоте в 1.3 раза
+        context.transform(
+            Math.cos(Math.PI / 6), Math.sin(Math.PI / 6), -1 * Math.sin(Math.PI / 6),
+            Math.cos(Math.PI / 6), 0, 0); // несколько прееобразований
+        // context.resetTransform(); // сброс трансформации
+
+        context.globalAlpha = 0.5;
+        context.fillStyle = "red";
+        context.fillRect(50, 50, 100, 100);
+    </script>
+</body>
+
+</html>
