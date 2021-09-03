@@ -7,32 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Dynamic title';
-  number = 42;
-  arr = [1, 2, 3];
+  title = 'Inintial';
 
-  obj = {a: 1, b: {c: 2}};
-
-  img = 'https://cdn.iconscout.com/icon/free/png-256/react-1543566-1306069.png';
-  inputValue = '';
-
-  constructor() {
-    setTimeout(() => {
-      console.log('Timeout is over');
-      this.img = 'https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg';
-    }, 5000);
-  }
-
-  onInput(event?: any) {
-    console.log('Event', event);
-    this.inputValue = event.target.value;
-  }
-
-  onClick() {
-    console.log('Click!');
-  }
-
-  onBlur(str) {
-    this.inputValue = str;
+  onInput(event: any) {
+    this.title = event.target.value;
   }
 }
