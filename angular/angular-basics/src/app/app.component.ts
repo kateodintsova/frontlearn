@@ -22,4 +22,9 @@ export class AppComponent {
     this.posts.unshift(post);
     console.log(this.posts);
   }
+
+  removePost(postId: number) {
+    console.log('id to remove', postId);
+    this.posts = this.posts.filter(p => p.id !== postId);
+  }
 }
