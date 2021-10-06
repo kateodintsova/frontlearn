@@ -7,12 +7,8 @@ import {Component, OnInit} from '@angular/core'
 })
 export class AppComponent implements OnInit {
 
-  appState = 'off';
+  ngOnInit() {
 
-  ngOnInit(): void {
-  }
-
-  handleChange() {
-    console.log(this.appState);
   }
 }
+
